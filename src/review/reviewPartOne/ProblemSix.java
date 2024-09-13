@@ -14,9 +14,9 @@ public class ProblemSix {
 		System.out.println("Enter number: ");
 		number = sc.nextInt();
 		
-		for (int i = 0; i < 11; i++)  {
+		for (int i = 1; i < 11; i++)  {
 			
-			System.out.println( i *  number );
+			System.out.println(number + " * " + i + " = " + (i *  number));
 			
 		}
 		
