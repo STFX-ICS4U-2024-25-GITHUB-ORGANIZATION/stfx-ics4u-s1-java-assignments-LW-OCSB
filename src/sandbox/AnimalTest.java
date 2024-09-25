@@ -1,21 +1,18 @@
 package sandbox;
 
-import myObjects.Animal;
+import lessons.Animal;
 
-public class ObjectTest { 
+public class AnimalTest {
 
 	public static void main(String[] args) {
 
-		// variables
-		Animal myAnimal = new Animal("purple", "land", 13);
+		Animal myAnimal = new Animal("blue", "land", 7);
 		
-		
-		System.out.println(myAnimal.getColor());
+		System.out.println(myAnimal.getColour());
 		System.out.println(myAnimal.getHabitat());
 		System.out.println(myAnimal.getAge());
-		
 		System.out.println(myAnimal.toString());
-		
+
 	}
 
 }
