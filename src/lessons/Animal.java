@@ -1,11 +1,11 @@
 package lessons;
 
-public class Animal {
+abstract class Animal {
 
 	// data members
-	private String colour;
-	private String habitat;
-	private int age;
+	protected String colour;
+	protected String habitat;
+	protected int age;
 	
 	
 	// Default Constructor
@@ -60,7 +60,8 @@ public class Animal {
 	@Override
 	public String toString()  {
 		
-		return super.toString();
+		return super.toString() + "." + this.colour + 
+				"." + this.habitat + "." + this.age;
 	}
 
 }

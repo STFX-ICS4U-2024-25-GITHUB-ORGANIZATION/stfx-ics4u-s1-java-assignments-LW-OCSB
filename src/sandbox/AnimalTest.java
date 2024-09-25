@@ -1,18 +1,31 @@
 package sandbox;
 
-import lessons.Animal;
+import lessons.Mammal;
 
 public class AnimalTest {
 
 	public static void main(String[] args) {
 
-		Animal myAnimal = new Animal("blue", "land", 7);
+		Mammal myMammal = new Mammal();
 		
-		System.out.println(myAnimal.getColour());
-		System.out.println(myAnimal.getHabitat());
-		System.out.println(myAnimal.getAge());
-		System.out.println(myAnimal.toString());
+		myMammal.setColour("blue");
+		myMammal.setHabitat("water");
+		myMammal.setAge(4);
+		myMammal.setFur(true);
+		
+		System.out.println(myMammal.getColour());
+		System.out.println(myMammal.getHabitat());
+		System.out.println(myMammal.getAge());
+		System.out.println(myMammal.getFur());
+		System.out.println(myMammal.toString());
 
+		Mammal myMammal2 = new Mammal("purple", "land", 13, true);
+		System.out.println(myMammal2.getColour());
+		System.out.println(myMammal2.getHabitat());
+		System.out.println(myMammal2.getAge());
+		System.out.println(myMammal2.getFur());
+		System.out.println(myMammal2.toString());
+		
 	}
 
 }
