@@ -6,7 +6,7 @@ public class VersionTest1 {
 
 
 		System.out.println("Hello World!");
-		System.out.println("3 day week!");
+		System.out.println("Hello");
 
 	}
 
