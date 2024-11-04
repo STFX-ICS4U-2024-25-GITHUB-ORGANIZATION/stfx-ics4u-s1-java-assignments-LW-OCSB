@@ -14,9 +14,8 @@ public class FileOutput {
 			
 			// create file
 			FileOutputStream fout = new FileOutputStream("C:\\Users\\e28166\\Desktop");
-			C:\Users\e28166\Desktop
-			
-			
+
+					
 		}
 		
 		catch(Exception e)  {
