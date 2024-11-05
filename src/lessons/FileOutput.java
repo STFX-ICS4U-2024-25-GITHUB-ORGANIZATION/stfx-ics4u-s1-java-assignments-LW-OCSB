@@ -15,7 +15,7 @@ public class FileOutput {
 		try {
 			
 			// create file
-			FileOutputStream fout = new FileOutputStream("C:\\Users\\e28166\\git");
+			FileOutputStream fout = new FileOutputStream("C:\\Users\\e28166\\desktop\\output.txt");
 
 			// create buffer
 			BufferedOutputStream bout = new BufferedOutputStream(fout);
