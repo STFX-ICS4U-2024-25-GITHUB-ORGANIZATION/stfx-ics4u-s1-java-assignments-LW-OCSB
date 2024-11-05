@@ -1,4 +1,6 @@
 package lessons;
+
+import java.io.*;
 import java.util.ArrayList;
 import java.io.*;
 
@@ -13,9 +15,23 @@ public class FileOutput {
 		try {
 			
 			// create file
-			FileOutputStream fout = new FileOutputStream("C:\\Users\\e28166\\Desktop");
+			FileOutputStream fout = new FileOutputStream("C:\\Users\\e28166\\git");
 
-					
+			// create buffer
+			BufferedOutputStream bout = new BufferedOutputStream(fout);
+			
+			// create writer (like System.out)
+			OutputStreamWriter out = new OutputStreamWriter(bout);
+			
+			// write contents of Array into a file
+			for(int i=0; i<food.length; i++)  {
+
+				out.write(food[i] + "\n");
+			}
+			
+			out.flush();
+			out.close();
+	
 		}
 		
 		catch(Exception e)  {
