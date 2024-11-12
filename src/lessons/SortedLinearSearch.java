@@ -16,7 +16,8 @@ public class SortedLinearSearch {
 	}
 	
 	// DESCRIPTION - Returns true if search pattern found at least
-	//				 once in array.
+	//				 once in array.  Searches entire array, only if
+	//				 necessary.
 	// PARAMETERS - String[] a, String s
 	// RETURN TYPE - boolean
 	public static boolean sortedLinearSearch(String[] a, String s)  {
