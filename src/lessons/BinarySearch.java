@@ -17,9 +17,9 @@ public class BinarySearch {
 	public static boolean binarySearch(String[] a, String s)  {
 		
 		// variables
-		int left = 0;						   // 0
-		int right = a.length - 1;              // 9
-		int middle = (left + right) / 2;	   // 5 
+		int left = 0;
+		int right = a.length - 1;
+		int middle = (left + right) / 2;
 		
 		while (left <= right)  {
 			
