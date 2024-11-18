@@ -7,7 +7,7 @@ public class BinarySearch {
 		String[] sortedArray = {"black", "blue", "brown", "green", "orange", "peach", 
 				"purple", "red", "salmon", "white"};    
 
-		System.out.println(binarySearch(sortedArray, "foo"));
+		System.out.println(binarySearch(sortedArray, "fubar"));
 		
 	}
 	
