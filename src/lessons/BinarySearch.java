@@ -1,6 +1,6 @@
 package lessons;
 
-public class DictionarySearch {
+public class BinarySearch {
 
 	public static void main(String[] args) {
 		
