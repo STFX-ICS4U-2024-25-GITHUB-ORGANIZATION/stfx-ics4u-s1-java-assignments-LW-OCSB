@@ -2,8 +2,6 @@ package lessons;
 
 public class QuickSort {
 	
-	public static int COUNTER = -1;
-	
 	public static void main(String[] args) {
 		
 		int[] myArray = {0, 4, 9, 8, 7, 3, 5, 1, 2, 6};
@@ -16,8 +14,6 @@ public class QuickSort {
 		quickSort(myArray, 0, myArray.length-1);
 		System.out.print("After Quick Sort:      ");
 		printArray(myArray);
-		
-		//System.out.println("\nRecursive Calls: " + COUNTER);
 	}
 	
 	
@@ -26,14 +22,15 @@ public class QuickSort {
     // RETURN - void
     public static void quickSort(int[] array, int left, int right)  {
        
-    	COUNTER++;
-    	
     	// variables
     	int pivot = 0;
     	
     	// base/stop case (sub-array is length 1, nothing to sort)
     	if (left == right)
     		return;
+    	
+    	// picking pivot strategies will vary
+    	pickPivot(array, left, right);
     	
     	// partition list
     	pivot = partition(array, left, right);
@@ -55,7 +52,7 @@ public class QuickSort {
     }
    
     
-    // DESCRIPTION - Selects element to become pivot, moves pivot to correct location
+    // DESCRIPTION - Right-most element to become pivot, moves pivot to correct location
     //				 in sorted list, moves all values less than pivot to left of pivot,
     //				 moves all values greater than pivot to right of pivot.  Returns
     //				 index of pivot.  a.length > 1.
@@ -67,7 +64,7 @@ public class QuickSort {
     	if (left == right)
     		return -1;
     	
-    	int pivot = pickPivot(array, left, right);
+    	int pivot = right;   	
     	int itemFromLeftIndex = getItemFromLeftIndex(array, left, right);  
     	int itemFromRightIndex = getItemFromRightIndex(array, left, right);  
     		
@@ -98,69 +95,13 @@ public class QuickSort {
     }
     
     
-    // DESCRIPTION - Selects element to become pivot, moves pivot to correct location
-    //				 in sorted list, moves all values less than pivot to left of pivot,
-    //				 moves all values greater than pivot to right of pivot.  Returns
-    //				 index of pivot.  a.length > 1.
-    // PARAMETERS - int[] array, int left, int right
-    // RETURN - int
-    public static int partitionNonRecursive(int[] array, int left, int right)  {
-    	
-    	// sub-array must be > 1
-    	if (left == right)
-    		return -1;
-    	
-    	// variables;
-    	int pivot = pickPivot(array, left, right);
-    	boolean repeat = true;
-    	
-    	while (repeat == true)  {
-    	    
-    		// get items from left and right (indexes)
-    		int itemFromLeftIndex = getItemFromLeftIndex(array, left, right);  
-    		int itemFromRightIndex = getItemFromRightIndex(array, left, right);  
-    		
-    		// CONDITION 1 - no itemFromLeft, pivot is right-most item, stop loop
-    		if (itemFromLeftIndex == -1)  {
-    			
-    			pivot = right;
-    			repeat = false;
-    		}
-    		
-    		// CONDITION 2 - no itemFromRight, swap pivot to left-most position, stop loop
-    		else if (itemFromRightIndex == -1)  {
-    			
-    			swap(array, left, right);
-    			pivot = left;
-    			repeat = false;
-    		}
-    		
-	        // CONDITION 3: Indexes cross.  Swap itemFromLeft with pivot.  Don't repeat.
-	        else if (itemFromLeftIndex > itemFromRightIndex)  {
-        	   
-        	   swap(array, itemFromLeftIndex, right);
-        	   pivot = itemFromLeftIndex;
-        	   repeat = false;
-	        }
-    		
-    		// CONDITION 4: swap elements and repeat (itemFromLeftIndex < itemFromRightIndex)
-	        else
-	        	swap(array, itemFromLeftIndex, itemFromRightIndex);
-    		
-    	}
-    	
-    	return pivot;
-    }
-    
-    
     // DESCRIPTION - Selects middle element to become pivot, swaps with right-most element in list.
     // PARAMETERS - int[] array, int left, int right
-    // RETURN - int (index of pivot)
-    public static int pickPivot(int[] array, int left, int right)  {
+    // RETURN - void
+    public static void pickPivot(int[] array, int left, int right)  {
         
     	int middle = (left + right) / 2;
     	swap(array, middle, right);
-    	return right;
     }
 	
     
@@ -173,8 +114,7 @@ public class QuickSort {
 		int itemFromLeftIndex = -1;
 		
 		for(int i=left; i<=right; i++)  {
-		    
-			//if (array[i] < array[right])  {		// DESCENDING
+
 		    if (array[i] > array[right])  {
 		        itemFromLeftIndex = i;
 		        break;
@@ -195,7 +135,6 @@ public class QuickSort {
 		
 		for(int i=right; i>=left; i--)  {
 		    
-			//if (array[i] > array[right]) {		// DESCENDING
 		    if (array[i] < array[right])  {
 		        itemFromRightIndex = i;
 		        break;
