@@ -22,9 +22,6 @@ public class QuickSort {
     // RETURN - void
     public static void quickSort(int[] array, int left, int right)  {
        
-    	// variables
-    	int pivot = 0;
-    	
     	// base/stop case (sub-array is length 1, nothing to sort)
     	if (left == right)
     		return;
@@ -33,7 +30,7 @@ public class QuickSort {
     	pickPivot(array, left, right);
     	
     	// partition list
-    	pivot = partition(array, left, right);
+    	int pivot = partition(array, left, right);
     
     	// pivot is left-most element, partition sub-list to the right
     	if (pivot == left)
