@@ -37,11 +37,11 @@ public class QuickSort {
     
     	// pivot is left-most element, partition sub-list to the right
     	if (pivot == left)
-    		quickSort(array, left+1, right);
+    		quickSort(array, pivot+1, right);
     	
     	// pivot is right-most element, partition sub-list to the left
     	else if (pivot == right)
-    		quickSort(array, left, right-1);
+    		quickSort(array, left, pivot-1);
     	
     	// pivot inside list, partition sub-lists on both sides of pivot
     	else  {
