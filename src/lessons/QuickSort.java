@@ -95,12 +95,41 @@ public class QuickSort {
     // DESCRIPTION - Selects middle element to become pivot, swaps with right-most element in list.
     // PARAMETERS - int[] array, int left, int right
     // RETURN - void
-    public static void pickPivot(int[] array, int left, int right)  {
+    public static void oldPickPivot(int[] array, int left, int right)  {
         
     	int middle = (left + right) / 2;
     	swap(array, middle, right);
     }
 	
+    
+    // DESCRIPTION - Uses "Median of Three" method for selecting pivot.  Orders left, middle and right, then swaps middle with right.
+    // PARAMETERS - int[] array, int left, int right
+    // RETURN - void
+    public static void pickPivot(int[] array, int left, int right)  {
+        
+    	int middle = (left + right) / 2;
+
+    	// sub-list contains 2 elements, can't determine median of three
+    	if ((left-right) == 1)
+    		swap(array, middle, right);
+    	
+    	// order left, middle and right in ascending order
+    	else  {
+    		
+    		if (array[left] > array[middle])
+    			swap(array, left, middle);
+    		
+    		if (array[middle] > array[right])
+    			swap(array, middle, right);
+    		
+    		if (array[left] > array[middle])
+    			swap(array, left, middle);
+    	}
+    	
+    	// move median to the right
+    	swap(array, middle, right);
+    }
+    
     
 	// DESCRIPTION - Returns index of first value bigger than pivot, starting from the left.  
     //				 Returns -1 if no element is bigger than pivot.
