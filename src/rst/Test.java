@@ -7,6 +7,8 @@ public class Test {
 		
 		System.out.println("This print statement was done at school!");
 
+		System.out.println("This print statement was done at home!");
+
 	}
 
 }
