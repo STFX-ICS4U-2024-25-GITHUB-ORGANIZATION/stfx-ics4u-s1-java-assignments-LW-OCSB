@@ -4,7 +4,12 @@ public class HelloWorld {
 
 	public static void main(String[] args) {
 		
-		System.out.println("Hello World!");
+		String words = "Java Programming Language";
+		int num = 5;
+
+		System.out.println(words.charAt(num +3));
+
+
 	}
 
 }
