@@ -1,6 +1,6 @@
 package assignments;
 
-import java.util.Scanner;
+import java.util.Scanner; 
 
 public class U2A1_1DArrays {
 
