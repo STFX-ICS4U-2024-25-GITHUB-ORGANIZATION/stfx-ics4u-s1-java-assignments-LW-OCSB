@@ -11,7 +11,7 @@ public class U2A1_1DArraysSolution {
 		
 		while (choice != 5)  {
 			
-			choice = displayMenu();
+			choice = displayMenuAndReturnChoice();
 			
 			if (choice == 1)
 				enterTwelveIntegers(myArray);
@@ -37,7 +37,7 @@ public class U2A1_1DArraysSolution {
 	// DESCRIPTION - Displays main menu, returns user choice
 	// PARAMETERS - NA
 	// RETURN TYPE - int
-	public static int displayMenu()  {
+	public static int displayMenuAndReturnChoice()  {
 		
 		// variables
 		int selection = 0;

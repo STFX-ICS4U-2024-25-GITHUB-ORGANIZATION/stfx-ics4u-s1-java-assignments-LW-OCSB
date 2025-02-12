@@ -14,7 +14,7 @@ public class U2A1_1DArrays {
 	// DESCRIPTION - Displays main menu, returns user choice
 	// PARAMETERS - NA
 	// RETURN TYPE - int
-	public static int displayMenu()  {
+	public static int displayMenuAndReturnChoice()  {
 		
 
 		return 0;	// temporary
