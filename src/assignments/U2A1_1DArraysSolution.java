@@ -34,7 +34,7 @@ public class U2A1_1DArraysSolution {
 	}
 	
 	
-	// DESCRIPTION - Displays main menu, returns user choice
+	// DESCRIPTION - Displays main menu, returns user choice (1-5)
 	// PARAMETERS - NA
 	// RETURN TYPE - int
 	public static int displayMenuAndReturnChoice()  {
