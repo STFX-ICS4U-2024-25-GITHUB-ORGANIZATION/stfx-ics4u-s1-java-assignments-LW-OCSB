@@ -13,14 +13,12 @@ public class MYMETHODS {
 
 	
 	// DESCRIPTION - Rounds double (x) to specified (y) number of decimal places
-	// PARAMETERS - double x, double y
+	// PARAMETERS - double x, int y
 	// RETURN TYPE - double
-	public static double roundDouble(double x, double y)  {
+	public static double roundDouble(double x, int y)  {
 		
-		y = Math.pow(10, y);
-		x = x * y;
-		x = Math.round(x);
-		return(x / 100);
+		x = Math.round(x * Math.pow(10, y));
+		return(x / Math.pow(10, y));
 	}
 	
 }
