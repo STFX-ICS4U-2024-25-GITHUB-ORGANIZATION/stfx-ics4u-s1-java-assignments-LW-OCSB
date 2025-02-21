@@ -1,7 +1,9 @@
+// Example of a conflict
+
 <<<<<<< HEAD
 package sandbox;
 
-public class VersionContro {
+public class VersionControl {
 
 	public static void main(String[] args) {
 
@@ -14,7 +16,7 @@ public class VersionContro {
 =======
 package sandbox;
 
-public class VersionContro {
+public class VersionControl {
 
 	public static void main(String[] args) {
 
