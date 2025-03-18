@@ -5,25 +5,26 @@ public class Car {
 	// data members
 	private double price;
 	private String model;
-	private int mileage;
 	private int year;
+	private int mileage;
 	
 	// default constructor
 	public Car()  {
 		
 		this.price = 0.00;
 		this.model = "";
+		this.year = 0;	
 		this.mileage = 0;
-		this.year = 0;		
 	}
 	
 	// parameterized constructor
-	public Car(double p, String mo, int mi, int y)  {
+	public Car(double p, String mo, int y, int mi)  {
 
 		this.price = p;
 		this.model = mo;
+		this.year = y;	
 		this.mileage = mi;
-		this.year = y;		
+			
 	}
 
 	// get methods
@@ -36,17 +37,17 @@ public class Car {
 		
 		return this.model;
 	}
-	
-	public int getMileage()  {
-		
-		return this.mileage;
-	}
-	
+
 	public int getYear()  {
 		
 		return this.year;
 	}
 	
+	public int getMileage()  {
+		
+		return this.mileage;
+	}
+
 	
 	// set methods
 	public void setPrice(double p)  {
@@ -61,23 +62,24 @@ public class Car {
 		
 	}
 
-	public void setMileage(int mi)  {
-	
-		this.mileage = mi;
-	
-	}
-
 	public void setYear(int y)  {
 	
 		this.year = y;
 	
 	}
 
+	public void setMileage(int mi)  {
+		
+		this.mileage = mi;
+	
+	}
+	
+	
 	// .toString()
 	@Override
 	public String toString()  {
 		
-		return super.toString() + "." + this.price + "." + this.model + "." + this.mileage
-			+ "." + this.year;
+		return super.toString() + "." + this.price + "." + this.model + "." + this.year
+			+ "." + this.mileage;
 	}
 }
