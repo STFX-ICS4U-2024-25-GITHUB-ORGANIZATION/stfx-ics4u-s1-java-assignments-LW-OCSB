@@ -9,7 +9,7 @@ public class Car extends Vehicle {
 	public Car()  {
 		
 		super();
-		mileage = 0;
+		this.mileage = 0;
 	}
 	
 	// parameterized constructor

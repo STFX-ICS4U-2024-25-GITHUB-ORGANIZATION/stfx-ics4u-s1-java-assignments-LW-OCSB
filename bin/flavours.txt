@@ -1,0 +1,5 @@
+salty
+sweet
+spicy
+sour
+vanilla
