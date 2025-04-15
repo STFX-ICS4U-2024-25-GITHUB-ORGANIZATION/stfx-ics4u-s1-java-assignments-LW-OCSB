@@ -4,8 +4,8 @@ public class Split {
 
 	public static void main(String[] args) {
 
-		String myString = "carrot, lettuce, sprouts, broccoli";
 		String[] myArray = null;
+		String myString = "carrot, lettuce, sprouts, broccoli";
 		
 		myArray = myString.split(",");
 		
@@ -13,8 +13,5 @@ public class Split {
 			
 			System.out.println(myArray[i]);
 		}
-		
-
 	}
-
 }
