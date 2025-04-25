@@ -1,7 +1,19 @@
 package myMethods;
 
-public class MYMETHODS {
+public class MyMethods {
 
+	
+	
+	// DESCRIPTION - Swaps elements x and y in array.
+	// PARAMETERS - int[] a, int x, int y
+	// RETURN - void
+	public static void swap(int[] a, int x, int y)  {
+		
+		int temp = a[x];
+		a[x] = a[y];
+		a[y] = temp;
+	}
+	
 	
 	// DESCRIPTION - Displays "Hello World!" to console
 	// PARAMETERS - NA

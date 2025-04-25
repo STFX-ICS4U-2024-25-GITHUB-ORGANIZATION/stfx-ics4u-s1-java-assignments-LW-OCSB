@@ -1,6 +1,6 @@
 package lessons;
 
-import myMethods.MYMETHODS;
+import myMethods.MyMethods;
 
 public class ChocolateBarInventory {
 	
@@ -53,7 +53,7 @@ public class ChocolateBarInventory {
 		valueWithTax = retailValue + (retailValue * TAX);
 		
 		System.out.println("Total Retail Value with Tax: $" + 
-			MYMETHODS.roundDouble(valueWithTax, 2));
+			MyMethods.roundDouble(valueWithTax, 2));
 		
 	}
 
