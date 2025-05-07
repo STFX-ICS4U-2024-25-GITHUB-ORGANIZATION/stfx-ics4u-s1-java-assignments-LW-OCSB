@@ -16,8 +16,11 @@ public class SelectionSort {
 	public static void selectionSortRecursive(int[] a, int i)  {
 		
 		// error case
-		if (i < 0)
+		if ((i < 0) || (i > a.length-1))  {
+
+			System.out.println("Invalid index.");
 			return;
+		}
 		
 		// base case / stop case
 		if(i == a.length-1)
