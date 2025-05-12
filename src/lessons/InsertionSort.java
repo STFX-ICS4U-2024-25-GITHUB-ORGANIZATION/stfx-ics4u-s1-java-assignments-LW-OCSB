@@ -6,12 +6,6 @@ public class InsertionSort {
 
 		int[] myArray = {4, 1, 3, 8, 2, 5, 6, 9, 7, 0};
 		
-		// print 1 to 0
-		for(int i=1; i<myArray.length; i++)  {
-			
-			System.out.print(myArray[i] + " ");
-		}
-		
 		insertionSort(myArray);
 
 	}
@@ -21,8 +15,21 @@ public class InsertionSort {
 	// RETURN - void
 	public static void insertionSort(int[] a)  {
 		
+		// outer loop
+		for(int i=1; i<a.length; i++)  {
 		
-		
+			// inner loop
+			for(int j=i; j>0; j--)  {
+				
+				if(a[j] < a[j-1])  {
+					
+					swap(a, j, j-1);
+				}
+				
+				else
+					break;
+			}
+		}
 	}
 	
 	
